@@ -67,7 +67,7 @@ const LatestPosts = () => {
                             className="mySwiper"
                         >
                             <SwiperSlide>
-                                <div className="card bg-base-100 border border-gray-100 w-96 shadow-xl">
+                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
                                     <figure style={{ width: '100%' }}>
                                         <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
@@ -81,13 +81,13 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-blue-500 w-96 shadow-xl">
-                                    <figure>
-                                        <Image src={project1} alt='Blog' fill></Image>
+                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                    <figure style={{ width: '100%' }}>
+                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Shoes!</h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                                        <h2 className="card-title">Life Lack Meaning</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
                                         <div className="card-actions justify-end">
                                             <button className="btn btn-primary">Buy Now</button>
                                         </div>
@@ -95,13 +95,13 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-blue-500 w-96 shadow-xl">
-                                    <figure>
-                                        <Image src={project1} alt='Blog' fill></Image>
+                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                    <figure style={{ width: '100%' }}>
+                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Shoes!</h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                                        <h2 className="card-title">Life Lack Meaning</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
                                         <div className="card-actions justify-end">
                                             <button className="btn btn-primary">Buy Now</button>
                                         </div>
@@ -109,13 +109,13 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-blue-500 w-96 shadow-xl">
-                                    <figure>
-                                        <Image src={project1} alt='Blog' fill></Image>
+                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                    <figure style={{ width: '100%' }}>
+                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Shoes!</h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                                        <h2 className="card-title">Life Lack Meaning</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
                                         <div className="card-actions justify-end">
                                             <button className="btn btn-primary">Buy Now</button>
                                         </div>
@@ -123,13 +123,13 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-blue-500 w-96 shadow-xl">
-                                    <figure>
-                                        <Image src={project1} alt='Blog' fill></Image>
+                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                    <figure style={{ width: '100%' }}>
+                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Shoes!</h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                                        <h2 className="card-title">Life Lack Meaning</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
                                         <div className="card-actions justify-end">
                                             <button className="btn btn-primary">Buy Now</button>
                                         </div>
@@ -137,13 +137,13 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-blue-500 w-96 shadow-xl">
-                                    <figure>
-                                        <Image src={project1} alt='Blog' fill></Image>
+                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                    <figure style={{ width: '100%' }}>
+                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Shoes!</h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                                        <h2 className="card-title">Life Lack Meaning</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
                                         <div className="card-actions justify-end">
                                             <button className="btn btn-primary">Buy Now</button>
                                         </div>
@@ -151,13 +151,13 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-blue-500 w-96 shadow-xl">
-                                    <figure>
-                                        <Image src={project1} alt='Blog' fill></Image>
+                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                    <figure style={{ width: '100%' }}>
+                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Shoes!</h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                                        <h2 className="card-title">Life Lack Meaning</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
                                         <div className="card-actions justify-end">
                                             <button className="btn btn-primary">Buy Now</button>
                                         </div>
@@ -165,13 +165,13 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-blue-500 w-96 shadow-xl">
-                                    <figure>
-                                        <Image src={project1} alt='Blog' fill></Image>
+                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                    <figure style={{ width: '100%' }}>
+                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Shoes!</h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                                        <h2 className="card-title">Life Lack Meaning</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
                                         <div className="card-actions justify-end">
                                             <button className="btn btn-primary">Buy Now</button>
                                         </div>
@@ -179,13 +179,13 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-blue-500 w-96 shadow-xl">
-                                    <figure>
-                                        <Image src={project1} alt='Blog' fill></Image>
+                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                    <figure style={{ width: '100%' }}>
+                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Shoes!</h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                                        <h2 className="card-title">Life Lack Meaning</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
                                         <div className="card-actions justify-end">
                                             <button className="btn btn-primary">Buy Now</button>
                                         </div>

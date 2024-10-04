@@ -1,5 +1,6 @@
 import AboutUs from "@/components/AboutUs";
 import Banner from "@/components/Banner";
+import ContactUs from "@/components/ContactUs";
 import LatestPosts from "@/components/LatestPosts";
 import OurTeam from "@/components/OurTeam";
 import PopularService from "@/components/PopularService";
@@ -15,6 +16,7 @@ export default function Home() {
       <Portfolio></Portfolio>
       <OurTeam></OurTeam>
       <LatestPosts></LatestPosts>
+      <ContactUs></ContactUs>
     </main>
   );
 }
