@@ -82,7 +82,7 @@ const ContactUs = () => {
                                 </div>
                                 <div className="flex-1">
                                     <p>Email</p>
-                                    <h3 className="text-xl flex">faisalosman798@gmail.com</h3>
+                                    <h3 className="text-xl flex">faisalosman@gmail.com</h3>
                                 </div>
                             </li>
 

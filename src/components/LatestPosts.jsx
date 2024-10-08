@@ -47,10 +47,9 @@ const LatestPosts = () => {
                                     slidesPerView: 1,
                                     spaceBetween: 10,
                                 },
-                                // Medium screens (768px and up)
                                 768: {
-                                    slidesPerView: 2,
-                                    spaceBetween: 15,
+                                    slidesPerView: 2,  // Show 3 slides on large screens
+                                    spaceBetween: 10,
                                 },
                                 // Large screens (1024px and up)
                                 1024: {
@@ -60,14 +59,14 @@ const LatestPosts = () => {
                                 // Extra-large screens (1366px and up)
                                 1366: {
                                     slidesPerView: 3,  // Show 4 slides on very large screens
-                                    spaceBetween: 30,  // Increase spacing for a spacious layout
+                                    spaceBetween: 20,  // Increase spacing for a spacious layout
                                 },
                             }}
                             modules={[Autoplay]}
-                            className="mySwiper"
+                            className="mySwiper flex justify-center"
                         >
                             <SwiperSlide>
-                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
                                     <figure style={{ width: '100%' }}>
                                         <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
@@ -81,7 +80,7 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
                                     <figure style={{ width: '100%' }}>
                                         <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
@@ -95,7 +94,7 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
                                     <figure style={{ width: '100%' }}>
                                         <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
@@ -109,7 +108,7 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
                                     <figure style={{ width: '100%' }}>
                                         <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
@@ -123,7 +122,7 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
                                     <figure style={{ width: '100%' }}>
                                         <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
@@ -137,7 +136,7 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
                                     <figure style={{ width: '100%' }}>
                                         <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
@@ -151,7 +150,7 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
                                     <figure style={{ width: '100%' }}>
                                         <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
@@ -165,7 +164,7 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
                                     <figure style={{ width: '100%' }}>
                                         <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
@@ -179,7 +178,7 @@ const LatestPosts = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="card bg-base-100 border-2 border-gray-300 w-96 shadow-xl">
+                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
                                     <figure style={{ width: '100%' }}>
                                         <Image src={project1} alt='Blog' width={390} height={200}></Image>
                                     </figure>
