@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="cupcake">
       <body className={jetbrainsMono.variable}>
         <Header></Header>
         {children}

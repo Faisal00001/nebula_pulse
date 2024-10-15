@@ -49,4 +49,7 @@ module.exports = {
     },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light", "dark", "cupcake"], // Enable DaisyUI's built-in light and dark themes
+  },
 }
