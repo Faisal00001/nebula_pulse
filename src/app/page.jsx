@@ -19,6 +19,7 @@ export default function Home() {
       <LatestPosts></LatestPosts>
       <ContactUs></ContactUs>
       <Footer></Footer>
+      {/* http://127.0.0.1:8000/projects/?format=json */}
     </main>
   );
 }
