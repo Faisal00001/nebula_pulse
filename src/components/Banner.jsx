@@ -1,6 +1,6 @@
-import Image from "next/image";
+
 import { Button } from "./ui/button";
-import Particle from "./particle";
+
 
 
 const Banner = () => {
