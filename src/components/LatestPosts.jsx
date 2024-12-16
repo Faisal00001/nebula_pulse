@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -15,7 +15,35 @@ import 'swiper/css/navigation';
 import { Autoplay } from 'swiper/modules';
 import project1 from "../../public/assets/projects/faisal1.jpg"
 import Image from 'next/image';
+import axios from 'axios';
 const LatestPosts = () => {
+    const [blogs, setBlogs] = useState([]);
+
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true)
+    // const [categoryWiseData, setCategoryWiseData] = useState([])
+    useEffect(() => {
+        // Fetch data from the Next.js API route
+        const fetchData = async () => {
+            try {
+
+                const res = await axios.get('/api/blogs');
+                setBlogs(res.data);
+
+                // const mobileRes = await axios.get('/api/projects/category');
+
+                setLoading(false)
+            } catch (err) {
+                console.error(err); // Log the error for debugging
+                setError("An error occurred");
+            }
+        };
+
+        fetchData();
+    }, []);
+    if (loading) {
+        return "Loading"
+    }
     return (
         <div className='mb-24'>
             <div className='container mx-auto'>
@@ -65,132 +93,36 @@ const LatestPosts = () => {
                             modules={[Autoplay]}
                             className="mySwiper flex justify-center"
                         >
-                            <SwiperSlide>
-                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
-                                    <figure style={{ width: '100%' }}>
-                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">Life Lack Meaning</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">Buy Now</button>
+                            {
+                                error && <p>{error}</p>
+                            }
+                            {blogs.map((blog, index) => {
+                                // Log each individual blog data
+                                return (
+                                    <SwiperSlide key={index}>
+                                        <div className="card mx-auto h-[650px] bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
+                                            <figure style={{ width: '100%', height: '270px', overflow: 'hidden' }}>
+                                                <Image
+                                                    src={blog.image || ''}
+                                                    alt={blog.title}
+                                                    width={390}
+                                                    height={200}
+                                                    style={{ objectFit: 'cover', width: '100%', height: '100%' }} // Ensure the image covers the area
+                                                />
+                                            </figure>
+
+                                            <div className="card-body">
+                                                <h2 className="card-title">{blog.title || "Untitled"}</h2>
+                                                <p>{blog.content.slice(0, 100) + "..." || "No description available"}</p>
+                                                <div className="card-actions justify-end">
+                                                    <button className="btn bg-black hover:bg-black text-white">Read More</button>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
-                                    <figure style={{ width: '100%' }}>
-                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">Life Lack Meaning</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">Buy Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
-                                    <figure style={{ width: '100%' }}>
-                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">Life Lack Meaning</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">Buy Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
-                                    <figure style={{ width: '100%' }}>
-                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">Life Lack Meaning</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">Buy Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
-                                    <figure style={{ width: '100%' }}>
-                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">Life Lack Meaning</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">Buy Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
-                                    <figure style={{ width: '100%' }}>
-                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">Life Lack Meaning</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">Buy Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
-                                    <figure style={{ width: '100%' }}>
-                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">Life Lack Meaning</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">Buy Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
-                                    <figure style={{ width: '100%' }}>
-                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">Life Lack Meaning</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">Buy Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="card mx-auto bg-base-100 border-2 border-gray-300 lg:w-96 shadow-xl">
-                                    <figure style={{ width: '100%' }}>
-                                        <Image src={project1} alt='Blog' width={390} height={200}></Image>
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">Life Lack Meaning</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, tempore!</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">Buy Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
+
+                                    </SwiperSlide>
+                                );
+                            })}
                         </Swiper>
                     </>
                 </div>

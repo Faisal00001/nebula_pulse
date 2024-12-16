@@ -28,7 +28,6 @@ const ProjectDetails = ({ params }) => {
     if (loading) {
         return loading
     }
-    console.log(project?.images[0])
     return (
         <div className="relative h-screen">
             {/* Full-width background image */}
@@ -44,7 +43,14 @@ const ProjectDetails = ({ params }) => {
                 <div className='flex flex-col lg:flex-row mt-10  items-center'>
                     <div className='flex-1 mt-14 mb-10 lg:mb-0'>
                         {
-                            project.images.length > 0 ? <Image className='rounded' src={`${baseUrl}${project?.images[0]}`} width={550} height={550} quality={100} alt='Project Image'></Image> : ''
+                            project.images.length > 0 ? <Image
+                                className='rounded object-cover' // Use object-cover to maintain aspect ratio
+                                src={`${baseUrl}${project?.images[0]}`}
+                                width={550}
+                                height={550}
+                                quality={100} // Ensure the quality is set to 100
+                                alt='Project Image'
+                                priority /> : ''
                         }
 
                     </div>

@@ -39,7 +39,9 @@ import Link from "next/link";
 //         },
 //     ]
 // }
+// {`${baseUrl}${project?.images[0]}`
 const Portfolio = () => {
+    const baseUrl = 'http://127.0.0.1:8000'
     const [projects, setProjects] = useState(null);
     const [categoryName, setCategoryName] = useState('')
     const [error, setError] = useState(null);
@@ -75,7 +77,6 @@ const Portfolio = () => {
     const handleCategory = (value) => {
         setCategoryName(value)
     }
-
     return (
         <div className="container mx-auto my-24">
             <div>
@@ -106,18 +107,23 @@ const Portfolio = () => {
                                         {
                                             projects.map((project, index) =>
                                                 <div key={index} className=" card bg-base-100 image-full md:w-96 shadow-xl rounded">
-                                                    <figure>
+                                                    <div className="absolute inset-0 bg-black bg-opacity-45 z-10 rounded-xl"></div>
+                                                    <figure className="relative w-full h-64">
                                                         <Image
-                                                            className="rounded"
-                                                            src={project1}
-                                                            alt="Project" fill />
+                                                            className="rounded-xl"
+                                                            src={`${baseUrl}${project?.images
+                                                            [0]}`}
+                                                            alt="Project" fill
+                                                            sizes="(max-width: 768px) 100vw, 
+                                                            (max-width: 1200px) 50vw, 
+                                                            33vw"/>
                                                     </figure>
                                                     <div className="card-body">
-                                                        <h2 className="card-title">{project.title}</h2>
-                                                        <p>{project.description.slice(0, 70) + " ..."}</p>
+                                                        <h2 className="card-title text-white">{project.title}</h2>
+                                                        <p className="text-white">{project.description.slice(0, 70) + " ..."}</p>
                                                         <div className="card-actions justify-end mt-5">
                                                             <Link href={`/projectDetails/${project.id}`} className="relative inline-flex items-center justify-start px-3 py-2 overflow-hidden font-medium transition-all bg-black rounded hover:bg-white group">
-                                                                <span className="w-48 h-48 rounded rotate-[-40deg] bg-purple-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                                                                <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#3B9EBF] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                                                                 <span className="relative w-full text-left text-white transition-colors duration-300 ease-in-out group-hover:text-white">View Details</span>
                                                             </Link>
 
@@ -140,18 +146,23 @@ const Portfolio = () => {
                                         {
                                             projects.map((project, index) =>
                                                 <div key={index} className=" card bg-base-100 image-full md:w-96 shadow-xl rounded">
-                                                    <figure>
+                                                    <div className="absolute inset-0 bg-black bg-opacity-45 z-10 rounded-xl"></div>
+                                                    <figure className="relative w-full h-64">
                                                         <Image
-                                                            className="rounded"
-                                                            src={project1}
-                                                            alt="Shoes" fill />
+                                                            className="rounded-xl"
+                                                            src={`${baseUrl}${project?.images
+                                                            [0]}`}
+                                                            alt="Shoes" fill
+                                                            sizes="(max-width: 768px) 100vw, 
+                                                            (max-width: 1200px) 50vw, 
+                                                            33vw"/>
                                                     </figure>
                                                     <div className="card-body">
                                                         <h2 className="card-title">{project.title}</h2>
                                                         <p>{project.description.slice(0, 70) + " ..."}</p>
                                                         <div className="card-actions justify-end mt-5">
                                                             <a href="#_" className="relative inline-flex items-center justify-start px-3 py-2 overflow-hidden font-medium transition-all bg-black rounded hover:bg-white group">
-                                                                <span className="w-48 h-48 rounded rotate-[-40deg] bg-purple-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                                                                <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#3B9EBF] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                                                                 <span className="relative w-full text-left text-white transition-colors duration-300 ease-in-out group-hover:text-white">View Details</span>
                                                             </a>
 
@@ -174,18 +185,23 @@ const Portfolio = () => {
                                         {
                                             projects.map((project, index) =>
                                                 <div key={index} className=" card bg-base-100 image-full md:w-96 shadow-xl rounded">
-                                                    <figure>
+                                                    <div className="absolute inset-0 bg-black bg-opacity-45 z-10 rounded-xl"></div>
+                                                    <figure className="relative w-full h-64">
                                                         <Image
-                                                            className="rounded"
-                                                            src={project1}
-                                                            alt="Shoes" fill />
+                                                            className="rounded-xl"
+                                                            src={`${baseUrl}${project?.images
+                                                            [0]}`}
+                                                            alt="Shoes" fill
+                                                            sizes="(max-width: 768px) 100vw, 
+                                                            (max-width: 1200px) 50vw, 
+                                                            33vw" />
                                                     </figure>
                                                     <div className="card-body">
                                                         <h2 className="card-title">{project.title}</h2>
                                                         <p>{project.description.slice(0, 70) + " ..."}</p>
                                                         <div className="card-actions justify-end mt-5">
                                                             <a href="#_" className="relative inline-flex items-center justify-start px-3 py-2 overflow-hidden font-medium transition-all bg-black rounded hover:bg-white group">
-                                                                <span className="w-48 h-48 rounded rotate-[-40deg] bg-purple-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                                                                <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#3B9EBF] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                                                                 <span className="relative w-full text-left text-white transition-colors duration-300 ease-in-out group-hover:text-white">View Details</span>
                                                             </a>
 
@@ -208,18 +224,23 @@ const Portfolio = () => {
                                         {
                                             projects.map((project, index) =>
                                                 <div key={index} className=" card bg-base-100 image-full md:w-96 shadow-xl rounded">
-                                                    <figure>
+                                                    <div className="absolute inset-0 bg-black bg-opacity-45 z-10 rounded-xl"></div>
+                                                    <figure className="relative w-full h-64">
                                                         <Image
-                                                            className="rounded"
-                                                            src={project1}
-                                                            alt="Shoes" fill />
+                                                            className="rounded-xl"
+                                                            src={`${baseUrl}${project?.images
+                                                            [0]}`}
+                                                            alt="Shoes" fill
+                                                            sizes="(max-width: 768px) 100vw, 
+                                                            (max-width: 1200px) 50vw, 
+                                                            33vw" />
                                                     </figure>
                                                     <div className="card-body">
                                                         <h2 className="card-title">{project.title}</h2>
                                                         <p>{project.description.slice(0, 70) + " ..."}</p>
                                                         <div className="card-actions justify-end mt-5">
                                                             <a href="#_" className="relative inline-flex items-center justify-start px-3 py-2 overflow-hidden font-medium transition-all bg-black rounded hover:bg-white group">
-                                                                <span className="w-48 h-48 rounded rotate-[-40deg] bg-purple-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                                                                <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#3B9EBF] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                                                                 <span className="relative w-full text-left text-white transition-colors duration-300 ease-in-out group-hover:text-white">View Details</span>
                                                             </a>
 

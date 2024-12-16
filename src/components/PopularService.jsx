@@ -5,50 +5,50 @@ const PopularService = () => {
     const services = [
         {
             icon: <MdOutlineManageHistory></MdOutlineManageHistory>,
-            hover_background_color: "hover:bg-blue-500",
-            icon_primary_color: "text-rose-500",
+            hover_background_color: "hover:bg-black",
+            icon_primary_color: "text-black",
             title: "Stock Management System"
         },
         {
             icon: <AiFillAndroid></AiFillAndroid>,
             hover_background_color: "hover:bg-black",
-            icon_primary_color: "text-pink-500",
+            icon_primary_color: "text-black",
             title: "Receivable & Payables"
         },
         {
             icon: <AiFillBug></AiFillBug>,
-            hover_background_color: "hover:bg-purple-500",
-            icon_primary_color: "text-blue-500",
+            hover_background_color: "hover:bg-black",
+            icon_primary_color: "text-black",
             title: "Manage Buying & Selling"
         },
         {
             icon: <AiFillControl></AiFillControl>,
-            hover_background_color: "hover:bg-lime-500",
-            icon_primary_color: "text-green-500",
+            hover_background_color: "hover:bg-black",
+            icon_primary_color: "text-black",
             title: "Message Notification"
         },
         {
             icon: <AiFillExperiment></AiFillExperiment>,
-            hover_background_color: "hover:bg-fuchsia-500",
-            icon_primary_color: "text-orange-500",
+            hover_background_color: "hover:bg-black",
+            icon_primary_color: "text-black",
             title: "Powerful & Secure Backup"
         },
         {
             icon: <AiFillPayCircle></AiFillPayCircle>,
-            hover_background_color: "hover:bg-emerald-500",
-            icon_primary_color: "text-teal-500",
+            hover_background_color: "hover:bg-black",
+            icon_primary_color: "text-black",
             title: "Product Management"
         },
         {
             icon: <AiFillTikTok></AiFillTikTok>,
-            hover_background_color: "hover:bg-teal-500",
-            icon_primary_color: "text-cyan-500",
+            hover_background_color: "hover:bg-black",
+            icon_primary_color: "text-black",
             title: "Customized Pricing System"
         },
         {
             icon: <AiFillWindows></AiFillWindows>,
-            hover_background_color: "hover:bg-cyan-500",
-            icon_primary_color: "text-pink-500",
+            hover_background_color: "hover:bg-black",
+            icon_primary_color: "text-black",
             title: "Fastest Return System"
         },
 
